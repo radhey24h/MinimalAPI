@@ -62,7 +62,7 @@ namespace Employee.ControllerWebApi.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Authorize(Roles = "Employee,Hr")]
+        //[Authorize(Roles = "Employee,Hr")]
         public async Task<ActionResult<IEnumerable<EmployeeDto>>> Get()
         {
             var employees = await _asyncEmployeeRepository.GetAll();
@@ -75,7 +75,7 @@ namespace Employee.ControllerWebApi.Controllers
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [Authorize(Roles = "Employee,Hr")]
+       // [Authorize(Roles = "Employee,Hr")]
         public ActionResult<EmployeeDto> GetDetails(int id)
         {
             var employee = _employeeRepository.GetDetails(id);

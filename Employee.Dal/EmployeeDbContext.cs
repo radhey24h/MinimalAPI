@@ -22,7 +22,7 @@ namespace Employee.Dal
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Data Source = localhost\\SQLEXPRESS; Initial Catalog = WebApiDb; Integrated Security = true;");
+                options.UseSqlServer("Data Source = DESKTOP-F3NAQPR; Initial Catalog = WebApiDb; Integrated Security = true;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
